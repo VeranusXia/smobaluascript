@@ -1,0 +1,27 @@
+{
+	"style" : "default",
+	"config" : "save_smoba.dat",
+	"width" : 740,
+	"height" : 560,
+	"cancelscroll" : true,
+	"countdown" : 30,
+	"cancelname" : "取消",
+	"okname" : "确定",
+	"views" : [ 
+	{
+	       "align" : "left",
+	       "color" : "0,0,0",
+	       "size" : "20",
+	       "text" : "王者荣耀自用脚本,请确保Home键在右侧",
+	       "bg" : "255,255,255",
+	       "type" : "Label"
+       },
+	   {
+	       "id" : "ComboBox1",
+	       "list" : "普通冒险刷金币,人机刷熟练(限时内测),通天塔亚瑟高速刷金币(限时内测)",
+	       "select" : "0",
+	       "size" : "30",
+	       "type" : "ComboBox"
+       }
+	]
+}

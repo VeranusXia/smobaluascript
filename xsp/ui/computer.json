@@ -1,0 +1,44 @@
+{
+	"style" : "default",
+	"config" : "save_smoba.dat",
+	"width" : 740,
+	"height" : 560,
+	"cancelscroll" : true,
+	"countdown" : 30,
+	"cancelname" : "取消",
+	"okname" : "确定",
+	"views" : [
+	   {
+	       "align" : "left",
+	       "color" : "0,0,0",
+	       "size" : "11",
+	       "text" : "自用人机脚本,请确保Home键在右侧,进入对战模式页面时开启脚本",
+	       "bg" : "255,255,255",
+	       "type" : "Label"
+       },
+	      {
+	       "align" : "left",
+	       "color" : "0,0,0",
+	       "size" : "20",
+	       "text" : "请在界面设置中将选择英雄排序改成按熟练度排序",
+	       "bg" : "255,255,255",
+	       "type" : "Label"
+       },
+	    {
+	       "align" : "left",
+	       "color" : "0,0,0",
+	       "size" : "11",
+	       "text" : "目前仅测试iphone6s,其他机型请酌情使用,更多意见和建议,请加QQ反馈群539445257",
+	       "bg" : "255,255,255",
+	       "type" : "Label"
+       },
+	    {
+	       "align" : "right",
+	       "color" : "0,0,0",
+	       "size" : "20",
+	       "text" : "2018.2.27",
+	       "bg" : "255,255,255",
+	       "type" : "Label"
+       }
+	]
+}
