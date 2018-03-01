@@ -10,7 +10,7 @@ local MovetoTower = coroutine.create(
 	--x2,y2=176,300;
 	while(1)
 	do 
-sysLog("位移");
+		sysLog("位移");
 		my = findImg("盟友.png", 90,  300, 100, 900, 530,"盟友");
 		death = findImg("死亡.png", 80, 584, 0, 734, 30,"死亡");
 		if death==true or d<1000 then 
@@ -72,7 +72,7 @@ end
 end
 end)
 
-function Fight()  
+function Fight5v5()  
 coroutine.resume(FindImg);
 end
 

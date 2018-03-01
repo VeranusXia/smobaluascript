@@ -1,18 +1,19 @@
 [SOURCE]
 1\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/common.lua
-size=6
+size=7
 2\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/computer.lua
-3\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/fight.lua
-4\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/main.lua
-5\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/money.lua
-6\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/highmoney.lua
+3\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/fight5v5.lua
+4\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/fight1v1.lua
+5\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/highmoney.lua
+6\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/main.lua
+7\SOURCEFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/src/money.lua
 
 [UI]
 1\UIFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/ui/computer.json
 size=4
-2\UIFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/ui/main.json
-3\UIFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/ui/money.json
-4\UIFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/ui/highmoney.json
+2\UIFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/ui/highmoney.json
+3\UIFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/ui/main.json
+4\UIFILE=C:/Users/veran/Documents/xspworkspace/smoba/xsp/ui/money.json
 
 [RES]
 size=25

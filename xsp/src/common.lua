@@ -10,6 +10,7 @@ function tap(x, y)
 end
 function tapNumber(x,y)
 	tap(x*wX,y*hX);
+	mSleep(50);
 end
 
 
