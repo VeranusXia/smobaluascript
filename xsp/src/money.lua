@@ -3,8 +3,8 @@ function goMoney()
 	pid = -1;
 	while(1)
 	do
-		appid = frontAppName() 
-		if appid=="com.tencent.smoba" then 
+		appid = frontAppName()  
+		if appid=="com.tencent.smoba" or appid=="com.tencent.tmgp.sgame" then 
 			if pid <1 or pid==-1 then
 				cg = getButton("闯关.png", 80, 922, 603, 1100, 660 ,"闯关");
 				if cg==true then 
@@ -31,7 +31,7 @@ function goMoney()
 				end
 			end 
 			
-			
+			mSleep(1000);
 			 
 		end
 	end

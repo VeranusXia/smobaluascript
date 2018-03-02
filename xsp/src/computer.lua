@@ -11,7 +11,7 @@ function goComputer(m)
 	while(1)
 	do
 		appid = frontAppName() 
-		if appid=="com.tencent.smoba" then 
+		if appid=="com.tencent.smoba" or appid=="com.tencent.tmgp.sgame" then 
 			if pid ==0 or pid==-1 then
 				rj = getButton("人机.png", 80, 1035, 313, 1161, 338,"人机");
 				if rj==true then 
@@ -67,6 +67,7 @@ function goComputer(m)
 						 yxok = getButton("英雄确认.png", 80, 1147, 680, 1283, 727,"英雄确认");
 						 if yxok==true then 
 							 pid=5; 
+							herox=herox+140;
 							 break; 
 						 end
 						 --sysLog(herox);
@@ -74,10 +75,8 @@ function goComputer(m)
 						 tapNumber(herox,heroy);
 						 mSleep(500);
 						 tycancel = getButton("体验取消.png", 80, 483, 483, 590, 530,"体验取消");
-						 mSleep(200);
-						 if tycancel==true then
-							herox=herox-140;
-						end
+						 mSleep(200); 
+						 herox=herox-140; 
 					end
 					if yxok==true then 
 						pid=5; 

@@ -24,15 +24,15 @@ function MovetoTower1v1()
 		
 		
 		local Step,x,y = 20,x1,y1
-		touchDown(1,x,y)
+		touchDownFix(1,x,y)
 		local function v(z,c) if z > c then return (-1 * Step) else return Step end end
 		while (math.abs(x-x2)>=Step) or (math.abs(y-y2)>=Step) do
 			if math.abs(x-x2)>=Step then x = x + v(x1,x2) end
 			if math.abs(y-y2)>=Step then y = y + v(y1,y2) end
-			touchMove(1, x, y)
+			touchMoveFix(1, x, y)
 			mSleep(20)
 		end
-		touchMove(1, x2, y2) 
+		touchMoveFix(1, x2, y2) 
 		while time>0 and rjjx==false
 		do
 			
@@ -42,14 +42,14 @@ function MovetoTower1v1()
 			
 			tower= FindTower(); 
 			if tower==true then
-				  touchMove(1,100,750)
+				  touchMoveFix(1,100,750)
 				  mSleep(3000)
 			end
 			
 			
 			feResult = FindEnemy();
 			if feResult==true then
-				touchUp(1,x2,y2);
+				touchUpFix(1,x2,y2);
 				GoFight1v1(); 
 				break;
 			end
@@ -60,7 +60,7 @@ function MovetoTower1v1()
 			mSleep(1000)
 			time=time-1000; 
 		end	
-		touchUp(1,x2,y2)
+		touchUpFix(1,x2,y2)
 		if feResult==true then
 			break;
 		end

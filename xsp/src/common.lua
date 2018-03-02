@@ -3,6 +3,14 @@ width,height = getScreenSize()
 wX=width/750;
 hX=height/1334;
 
+ver = getOSType()
+if ver == "android" then
+	sysLog("安卓系统")
+elseif ver == "iOS" then
+	sysLog("苹果系统")
+end
+
+
 function tap(x, y)
 	touchDown(2, x, y);
 	mSleep(100);
@@ -11,37 +19,45 @@ end
 function tapNumber(x,y)
 	tap(x*wX,y*hX);
 	mSleep(50);
+end 
+function touchDownFix(i,x,y)
+	touchDown(i,x*wX,y*hX)
 end
-
+function touchMoveFix(i,x,y)
+	touchMove(i,x*wX,y*hX)
+end
+function touchUpFix(i,x,y)
+	touchUp(i,x*wX,y*hX)
+end
 
 function swip(x1,y1,x2,y2)
 	local Step,x,y = 20,x1,y1
-	touchDown(1,x,y)
+	touchDownFix(1,x,y)
 	local function v(z,c) if z > c then return (-1 * Step) else return Step end end
 	while (math.abs(x-x2)>=Step) or (math.abs(y-y2)>=Step) do
 		if math.abs(x-x2)>=Step then x = x + v(x1,x2) end
 		if math.abs(y-y2)>=Step then y = y + v(y1,y2) end
-		touchMove(1, x, y)
+		touchMoveFix(1, x, y)
 		mSleep(20)
 	end
-	touchMove(1, x2, y2)
+	touchMoveFix(1, x2, y2)
 	mSleep(30)
-	touchUp(1,x2,y2)
+	touchUpFix(1,x2,y2)
 end
 
 function swipMove(x1,y1,x2,y2,time)
 	local Step,x,y = 20,x1,y1
-	touchDown(1,x,y)
+	touchDownFix(1,x,y)
 	local function v(z,c) if z > c then return (-1 * Step) else return Step end end
 	while (math.abs(x-x2)>=Step) or (math.abs(y-y2)>=Step) do
 		if math.abs(x-x2)>=Step then x = x + v(x1,x2) end
 		if math.abs(y-y2)>=Step then y = y + v(y1,y2) end
-		touchMove(1, x, y)
+		touchMoveFix(1, x, y)
 		mSleep(20)
 	end
-	touchMove(1, x2, y2)
+	touchMoveFix(1, x2, y2)
 	mSleep(time)
-	touchUp(1,x2,y2)
+	touchUpFix(1,x2,y2)
 end
 
 
@@ -62,7 +78,7 @@ function getButton(img,d,x1,y1,x2,y2,text)
 	 x2=x2*wX;
 	 y1=y1*hX;
 	 y2=y2*hX;
-	 
+	 img = ver.."_"..img;
 	i=100;
 	while i>0
 	do 
@@ -86,6 +102,7 @@ function findImg(img,d,x1,y1,x2,y2,text)
 	 x2=x2*wX;
 	 y1=y1*hX;
 	 y2=y2*hX;
+	 img = ver.."_"..img;
 	 
 	i=20;
 	while i>0

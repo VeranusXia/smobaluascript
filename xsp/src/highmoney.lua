@@ -5,7 +5,7 @@ function HighMoney()
 	while(1)
 	do
 		appid = frontAppName() 
-		if appid=="com.tencent.smoba" then 
+		if appid=="com.tencent.smoba" or appid=="com.tencent.tmgp.sgame" then 
 			if pid <1 or pid==-1 then
 				cg = getButton("闯关.png", 80, 922, 603, 1100, 660 ,"闯关");
 				if cg==true then 
@@ -68,7 +68,7 @@ end
 
 function swipMoveHM(x1,y1,x2,y2,time)
 	local Step,x,y = 20,x1,y1
-	touchDown(1,x,y)
+	touchDownFix(1,x,y)
 	local function v(z,c) if z > c then return (-1 * Step) else return Step end end
 	while (math.abs(x-x2)>=Step) or (math.abs(y-y2)>=Step) do
 		if math.abs(x-x2)>=Step then x = x + v(x1,x2) end
@@ -76,7 +76,7 @@ function swipMoveHM(x1,y1,x2,y2,time)
 		touchMove(1, x, y)
 		mSleep(20)
 	end
-	touchMove(1, x2, y2)
+	touchMoveFix(1, x2, y2)
 	while time>=0
 	do
 	
@@ -86,5 +86,5 @@ function swipMoveHM(x1,y1,x2,y2,time)
 		mSleep(1000)
 		time=time-1000;
 	end	
-	touchUp(1,x2,y2)
+	touchUpFix(1,x2,y2)
 end
