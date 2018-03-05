@@ -91,6 +91,7 @@ function goComputer(m)
 				startfight = findImg("开打.png", 80, 22, 277, 76, 382,"战斗画面");
 				if startfight==true then
 					if m=="1" then 
+						Fightv2()
 					elseif m=="2" then
 						Fightv2();
 					end
