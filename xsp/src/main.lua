@@ -1,8 +1,8 @@
 require "common"
 require "money"
 require "computer"
-require "fight1v1"
-require "fight5v5"
+require "fightv1"
+require "fightv2" 
 require "highmoney"
 
 init("0",1)
@@ -20,13 +20,12 @@ if mainbtn==1 then
 	elseif cbvalue== "1" then  
 		uibtn2,result2=showUI("computer.json");
 		if uibtn2==1 then
-			--Fight1v1();
+			--Fightv3();
 			goComputer(cbvalue);
 		end  
 	elseif cbvalue== "2" then  
 		uibtn2,result2=showUI("computer.json");
-		if uibtn2==1 then
-			--Fight();
+		if uibtn2==1 then 
 			goComputer(cbvalue);
 		end   	
 	else

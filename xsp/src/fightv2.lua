@@ -119,7 +119,7 @@ function overFight()
 	return rjjx;  
 end
 
-function Fight1v1()  
+function Fightv2()  
 	sysLog("开始战斗"); 
 	mSleep(10000);
 	MovetoTower1v1();

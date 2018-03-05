@@ -72,7 +72,7 @@ end
 end
 end)
 
-function Fight5v5()  
+function Fightv1()  
 coroutine.resume(FindImg);
 end
 
