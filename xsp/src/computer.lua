@@ -1,6 +1,7 @@
 require "common"
 require "fightv1"
 require "fightv2"
+require "fightv3"
 
 
 function goComputer(m)
@@ -91,9 +92,9 @@ function goComputer(m)
 				startfight = findImg("开打.png", 80, 22, 277, 76, 382,"战斗画面");
 				if startfight==true then
 					if m=="1" then 
-						Fightv2()
+						Fightv3()
 					elseif m=="2" then
-						Fightv2();
+						Fightv3();
 					end
 					sysLog("战斗结束");
 					pid=6;

@@ -120,6 +120,26 @@ function findImg(img,d,x1,y1,x2,y2,text)
 	return false;
 end
 
+function getColorXY(x1,y1,x2,y2,color)
+	x1=x1*wX;
+	 x2=x2*wX;
+	 y1=y1*hX;
+	 y2=y2*hX; 
+	 i=500;
+	while i>0
+	do 
+		x, y = findColor(
+			{x1, y1, x2, y2},
+			color,
+			100,0,0,0)  
+		if x>0 then 
+			return x,y;
+		else
+			i=i-1;
+		end
+	 end
+	 return -1,-1;
+end
 
 function HUD(msg)
 	showHUD(id,msg,16,"0xffff0000","0xffffffff",0,0,0,120,20)      --显示HUD内容 
