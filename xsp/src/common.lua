@@ -78,17 +78,22 @@ function getButton(img,d,x1,y1,x2,y2,text)
 	 x2=x2*wX;
 	 y1=y1*hX;
 	 y2=y2*hX;
-	 img = ver.."_"..img;
+	 img2 = ver.."_"..img;
 	i=100;
 	while i>0
 	do 
-		x, y = findImageInRegionFuzzy(img,d,x1,y1,x2,y2, 0xffffff);
+		x, y = findImageInRegionFuzzy(img2,d,x1,y1,x2,y2, 0xffffff);
 		if x ~= -1 and y ~= -1 then        --如果在指定区域找到某图片符合条件
+			mSleep(100);
 			tap( x, y);            --那么单击该图片 
 			-- HUD(text , 0); 
 			sysLog(text);
 			i=0;
-			return true;
+			
+			fi= findImg(img,d,x1,y1,x2,y2,text)
+			return fi;
+			
+			--return true;
 		else                               --如果找不到符合条件的图片
 			i=i-1;
 		end
@@ -131,7 +136,7 @@ function getColorXY(x1,y1,x2,y2,color)
 		x, y = findColor(
 			{x1, y1, x2, y2},
 			color,
-			100,0,0,0)  
+			90,0,0,0)  
 		if x>0 then 
 			return x,y;
 		else
@@ -142,5 +147,5 @@ function getColorXY(x1,y1,x2,y2,color)
 end
 
 function HUD(msg)
-	showHUD(id,msg,16,"0xffff0000","0xffffffff",0,0,0,120,20)      --显示HUD内容 
+	showHUD(id,msg,16,"0xffff0000","0xffffffff",0,0,0,120,30)      --显示HUD内容 
 end

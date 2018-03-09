@@ -50,23 +50,29 @@ end
 
 function MoveAndSearch()
 	rjjx=overFight();
-	if rjjx==true then
-		return true;
-	end
 	while(rjjx==false)
 	do
+		sysLog("移动")
 		x1,y1=176,594;
 		x2,y2=242,500;
-		time=10;
+		time=5;
 		
 		my = findImg("盟友.png", 90,  300, 100, 900, 530,"盟友");
 		death = findImg("死亡.png", 80, 584, 0, 734, 30,"死亡");
 		
-		if my==true or death==true then 
+		if my==true  then 
 			time =0;
 			mSleep(3000);
 		end
-		
+		if death==true then 
+			while death
+			do
+				mSleep(3000)
+				death = findImg("死亡.png", 80, 584, 0, 734, 30,"死亡");
+			end
+			 
+			swipMove(176,594,176,749,5000)
+		end
 		
 		
 		local Step,x,y = 20,x1,y1
@@ -80,16 +86,15 @@ function MoveAndSearch()
 		end
 		touchMoveFix(1, x2, y2) 
 		while time>0  
-		do
-			 
+		do 
 			tapNumber(1220,650); --普攻
 			
 			tower= FindTower(); 
- 
+			
 			
 			if tower==true  then
 				  touchMoveFix(1,70,750)
-				  mSleep(1800);
+				  mSleep(1200);
 				  touchMoveFix(1,x2,y2)
 				  time=0;
 				  touchUpFix(1,x2,y2) 
@@ -97,11 +102,12 @@ function MoveAndSearch()
 			end
 			
 			
+			tapNumber(1220,650); --普攻
 			feResult = FindEnemy();
 			
 			 if  feResult==true then
 				  touchMoveFix(1,70,750)
-				  mSleep(800);
+				  mSleep(700);
 				  touchMoveFix(1,x2,y2)
 				  time=0;
 				  touchUpFix(1,x2,y2)
@@ -109,10 +115,11 @@ function MoveAndSearch()
 				  break;
 			end
 			
-			mSleep(1000)
+			mSleep(500)
 			time=time-1; 
 		end	
 		touchUpFix(1,x2,y2)
+		rjjx=overFight();
 	end
 end
 
@@ -130,36 +137,51 @@ function goFight()
 		tapNumber(1000,650); --1技能
 		tapNumber(1070,520); --2技能
 		tapNumber(1220,450); --3技能
+		
+		
+		tapNumber(1024,540); --4技能英雄的2技能
+		tapNumber(1116,463); --4技能英雄的3技能
+		
 		tapNumber(140,300); --买装备
 		tapNumber(1140,360);--升级大招
 		tapNumber(920,580); --升级1
 		tapNumber(1000,440); --升级2
+		
+		tapNumber(964,480); --4技能英雄的升级1
+		tapNumber(1065,393); --4技能英雄的升级2
+		
+		
 		tapNumber(1220,650); 
+		tapNumber(880,667); 
 		
 		 feResult = FindEnemy();
-		tower= FindTower(); 
-		if result==false then
+		--tower= FindTower(); 
+		if feResult==false then
+			tapNumber(778 , 673); 
 			 return;
 		end
-		if tower==true  then
-		sysLog(1)
-			return;
-		end
+		 
 		
 	end
 end
 
 function FindEnemy()
-	key = findImg("血条.png", 80, 770, 30, 830, 60,"血条");
-	key2 = findImg("血条2.png", 80, 300, 100, 900, 530,"血条2");
-	key3 = findImg("血条3.png", 80, 650, 0, 720, 30,"血条3");
-	 result =	key==true or key2==true or key3==true  ;
-	 return result;
+	--key = findImg("血条.png", 80, 770, 30, 830, 60,"血条");
+	--key2 = findImg("血条2.png", 80, 300, 100, 900, 530,"血条2");
+	--key3 = findImg("血条3.png", 80, 650, 0, 720, 30,"血条3");
+	 --result =	key==true or key2==true or key3==true  ;
+	 --return result;
+	 x,y= getColorXY( 655, 3, 657, 5, "0|0|0x511911" ) 
+	 sysLog(x);
+	 if x>0 then 
+		 return true 
+	 else
+		 return false
+	 end
 	
 end
 function FindTower()
 	
- 
 	 xt,yt=searchTower1()
 	   
 	 if t1==false then 
@@ -170,16 +192,14 @@ function FindTower()
 		 
 	 end
 	 if t3==false then
-		xt,yt=230,40;
+		xt,yt=220,30;
 	 end
 	 searchMe();
-	if xm<0 then return false end
+	if xm<0 then return false end 
+	  
 	
-	sysLog(xt-xm)
-	sysLog(ym-yt)
-	
-	if xt-xm<=30 or ym-yt<=20	then
-		   return true;
+	if xt-xm<=20 or ym-yt<=10	then
+		   return false;
 	   else 
 		   return false;
 	   end
@@ -194,7 +214,7 @@ end
 
 
 function Fightv3()  
-	sysLog("开始战斗"); 
-	mSleep(7000);
+	sysLog("开始战斗");  
+	swipMove(176,594,176,749,5000)
 	MoveAndSearch();
 end

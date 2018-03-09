@@ -26,19 +26,19 @@ function HighMoney()
 				mSleep(50);
 				x1,y1=175,595;
 				d=3700;
-				x2,y2=115,475;
+				x2,y2=115,480;
 				swipMoveHM(x1,y1,x2,y2,d);   
 				
 				mSleep(50);
-				x2,y2=115,469;
+				x2,y2=115,472;
 				swipMoveHM(x1,y1,x2,y2,d);   
 				
 				mSleep(50);
-				x2,y2=115,463;
+				x2,y2=115,464;
 				swipMoveHM(x1,y1,x2,y2,d); 
 				
 				mSleep(50);
-				x2,y2=115,457;  
+				x2,y2=115,458;  
 				swipMoveHM(x1,y1,x2,y2,d);  
 				
 				
@@ -51,7 +51,7 @@ function HighMoney()
 				jx = getButton("继续.png", 80, 567, 673, 771, 726 ,"继续");
 				if jx==true then
 					   pid=4;
-				elseif zd  then  
+				else 
 					   tap(1,1);
 				end
 			end
@@ -67,7 +67,7 @@ function HighMoney()
 				end
 			end 
 			
-			
+			mSleep(2000);
 			 
 		end
 	end
