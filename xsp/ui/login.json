@@ -1,0 +1,91 @@
+{
+   "style" : "default",
+   "config" : "save_smoba.dat",
+   "width" : 940,
+   "height" : 560,
+   "cancelscroll" : true,
+   "countdown" : 999,
+   "cancelname" : "取消",
+   "okname" : "确定",
+   "views" : [
+	
+      
+      {
+         "align" : "left",
+         "color" : "0,0,0",
+         "size" : "30",
+         "text" : "注册即享脚本永久免费激活码",
+         "bg" : "255,255,255",
+         "type" : "Label"
+      },
+	  {
+         "color" : "100,110,200",
+         "size" : 20,
+         "text" : "请输入激活码:",
+         "type" : "Label",
+         "rect" : "0,0,350,120"
+      },
+      {
+         "color" : "0,0,0",
+         "bg" : "255,255,255",
+         "size" : 20,
+         "text" : "",
+         "type" : "Edit",
+         "rect" : "0,0,350,120",
+         "id" : "inputR"
+      },
+	   {
+         "color" : "0,0,0",
+         "extra" : [
+            {
+               "goto" : "http://www.opcd.com.cn/register.html?channel=51&backUrl=/index",
+               "text" : "注册账户"
+            }
+         ],
+         "size" : 30,
+         "text" : "未注册的用户可以点此 注册账户",
+         "type" : "Label",
+         "rect" : "0,0,350,120"
+      },
+      {
+         "color" : "0,0,0",
+         "extra" : [
+            {
+               "goto" : "http://www.opcd.com.cn/login.html?redirectUri=http://community.opg.cn/token.html",
+               "text" : "获取脚本激活码"
+            }
+         ],
+         "size" : 30,
+         "text" : "已注册的用户可以点此登录 获取脚本激活码",
+         "type" : "Label",
+         "rect" : "0,0,350,120"
+      },
+      {
+         "color" : "100,110,200",
+         "size" : 20,
+         "text" : "作者与G游戏平台合作 注册平台账号即可享受本脚本终生免费",
+         "type" : "Label",
+         "rect" : "0,0,350,120"
+      },
+      {
+         "color" : "100,110,200",
+         "size" : 20,
+         "text" : "G游戏平台是上海著名的地标东方明珠[股票:600637]旗下的游戏平台",
+         "type" : "Label",
+         "rect" : "0,0,350,120"
+      },
+      {
+         "color" : "100,110,200",
+         "size" : 20,
+		"extra" : [
+            {
+               "goto" : "http://www.opcd.com.cn/",
+               "text" : "http://www.opcd.com.cn"
+            }
+         ],
+         "text" : "您也可以通过浏览器直接访问http://www.opcd.com.cn了解更多平台相关游戏资讯",
+         "type" : "Label",
+         "rect" : "0,0,350,120"
+      }
+   ]
+}

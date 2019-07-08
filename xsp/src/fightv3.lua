@@ -54,11 +54,12 @@ function MoveAndSearch()
 	do
 		sysLog("移动")
 		x1,y1=176,594;
-		x2,y2=242,500;
+		x2,y2=239,500;
 		time=5;
 		
 		my = findImg("盟友.png", 90,  300, 100, 900, 530,"盟友");
-		death = findImg("死亡.png", 80, 584, 0, 734, 30,"死亡");
+		--death = findImg("死亡.png", 80, 584, 0, 734, 30,"死亡");
+		death = findColor2(613,9,613,9,0xf9eeee,"死亡");
 		
 		if my==true  then 
 			time =0;
@@ -68,7 +69,8 @@ function MoveAndSearch()
 			while death
 			do
 				mSleep(3000)
-				death = findImg("死亡.png", 80, 584, 0, 734, 30,"死亡");
+				--death = findImg("死亡.png", 80, 584, 0, 734, 30,"死亡");
+		death = findColor2(613,9,613,9,0xf9eeee,"死亡");
 			end
 			 
 			swipMove(176,594,176,749,5000)
@@ -117,9 +119,9 @@ function MoveAndSearch()
 			
 			mSleep(500)
 			time=time-1; 
+			rjjx=overFight();
 		end	
 		touchUpFix(1,x2,y2)
-		rjjx=overFight();
 	end
 end
 
@@ -171,8 +173,8 @@ function FindEnemy()
 	--key3 = findImg("血条3.png", 80, 650, 0, 720, 30,"血条3");
 	 --result =	key==true or key2==true or key3==true  ;
 	 --return result;
-	 x,y= getColorXY( 655, 3, 657, 5, "0|0|0x511911" ) 
-	 sysLog(x);
+	 x,y= getColorXY( 657,7, 657,7, "0|0|0xa02521" ) 
+	 --sysLog(x);
 	 if x>0 then 
 		 return true 
 	 else
@@ -207,7 +209,10 @@ end
 
 
 function overFight()
-	rjjx = getButton("人机继续.png", 80, 580, 670, 750, 720,"人机继续");
+	--rjjx = getButton("人机继续.png", 80, 580, 670, 750, 720,"人机继续");
+	--rjjx = getColorButton(639,689,639,689,0x404040,"0xd5dfe4")
+	 x,y= getColorXY( 639,689,639,689, "0|0|0xd5dfe4" ) 
+	 rjjx = x>0;
 	return rjjx;  
 end
 
