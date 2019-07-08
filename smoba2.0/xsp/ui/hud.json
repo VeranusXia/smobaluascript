@@ -1,0 +1,39 @@
+{
+   "view" : "div",
+   "style" : {
+      "align-items" : "flex-start",
+      "justify-content" : "flex-start",
+      "flex-direction" : "column",
+      "style" : {
+         "background-color" : "#000"
+      }
+   },
+   "subviews" : [
+    {
+         "view" : "div",
+         "style" : {
+            "background-color" : "#000",
+            "width" : 500,
+            "height" : 40,
+            "flex-direction" : "row",
+            "justify-content" : "center",
+            "align-items" : "center"
+         },
+         "subviews" : [
+			{
+               "view" : "text",
+               "value" : "",
+				"id":"msg",
+               "style" : {
+                  "width" : 500,
+                  "height" : 30 ,
+                  "color" : "#fff",
+                  "font-size" : 20,
+                  "text-align" : "center"
+               }
+            }
+         ]
+      }
+   
+   ]
+}

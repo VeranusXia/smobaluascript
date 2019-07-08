@@ -1,0 +1,193 @@
+{
+   "view" : "div",
+   "style" : {
+      "align-items" : "center",
+      "justify-content" : "center",
+      "style" : {
+         "background-color" : "#fff",
+         "flex-direction" : "column"
+      }
+   },
+   "subviews" : [
+      {
+         "view" : "div",
+         "style" : {
+            "background-color" : "#000",
+            "width" : 750,
+            "height" : 130,
+            "flex-direction" : "row",
+            "justify-content" : "center",
+            "align-items" : "center"
+         },
+         "subviews" : [
+            {
+               "view" : "image",
+               "placeholder" : "G游戏平台",
+               "src" : "http://www.opcd.com.cn/static/images/home/fy_03.png",
+               "style" : {
+                  "width" : 225,
+                  "height" : 62,
+                  "color" : "#fff",
+                  "font-size" : 30,
+                  "text-align" : "center"
+               }
+            }
+         ]
+      },
+      {
+         "view" : "div",
+         "id" : "menu",
+         "style" : {
+            "background-color" : "#000",
+            "width" : 750,
+            "height" : 50,
+            "flex-direction" : "row",
+            "justify-content" : "center",
+            "align-items" : "center"
+         },
+         "subviews" : [
+            {
+               "view" : "text",
+               "value" : "输入账号",
+               "style" : {
+                  "width" : 150,
+                  "height" : 30,
+                  "color" : "#fff",
+                  "font-size" : 20
+               }
+            },
+            {
+               "view" : "input",
+               "value" : "",
+               "style" : {
+                  "width" : 450,
+                  "height" : 30,
+                  "color" : "#000",
+                  "font-size" : 20,
+                  "background-color" : "#fff"
+               }
+            }
+         ]
+      },
+      {
+         "view" : "div",
+         "id" : "menu2",
+         "style" : {
+            "background-color" : "#000",
+            "width" : 750,
+            "height" : 50,
+            "flex-direction" : "row",
+            "justify-content" : "center",
+            "align-items" : "center"
+         },
+         "subviews" : [
+            {
+               "view" : "text",
+               "value" : "输入激活码",
+               "style" : {
+                  "width" : 150,
+                  "height" : 30,
+                  "color" : "#fff",
+                  "font-size" : 20
+               }
+            },
+            {
+               "view" : "input",
+               "value" : "",
+				"id" : "txtToken",
+               "style" : {
+                  "width" : 450,
+                  "height" : 30,
+                  "color" : "#000",
+                  "font-size" : 20,
+                  "background-color" : "#fff"
+               }
+            }
+         ]
+      },
+      {
+         "view" : "div",
+         "style" : {
+            "background-color" : "#000",
+            "width" : 750,
+            "height" : 130,
+            "flex-direction" : "row",
+            "justify-content" : "center",
+            "align-items" : "center"
+         },
+         "subviews" : [
+            {
+               "view" : "text",
+               "value" : "确定",
+               "id" : "btn_ok",
+               "style" : {
+                  "width" : 100,
+                  "height" : 35,
+                  "padding" : 2,
+                  "color" : "#fff",
+                  "font-size" : 20,
+                  "text-align" : "center",
+                  "border-style:" : "solid",
+                  "border-width" : 1,
+                  "border-color" : "#fff",
+                  "border-radius" : 1
+               }
+            },
+            {
+               "view" : "text",
+               "value" : "注册账号",
+               "id" : "btn_reg",
+               "style" : {
+                  "width" : 120,
+                  "height" : 35,
+                  "padding" : 2,
+                  "margin-left" : 30,
+                  "color" : "#fff",
+                  "font-size" : 20,
+                  "text-align" : "center",
+                  "border-style:" : "solid",
+                  "border-width" : 1,
+                  "border-color" : "#fff",
+                  "border-radius" : 1
+               }
+            },
+            {
+               "view" : "text",
+               "value" : "获取激活码",
+               "id" : "btn_getcode",
+               "style" : {
+                  "width" : 120,
+                  "height" : 35,
+                  "padding" : 2,
+                  "margin-left" : 30,
+                  "color" : "#fff",
+                  "font-size" : 20,
+                  "text-align" : "center",
+                  "border-style:" : "solid",
+                  "border-width" : 1,
+                  "border-color" : "#fff",
+                  "border-radius" : 1
+               }
+            },
+            {
+               "view" : "text",
+               "value" : "退出",
+               "id" : "btn_close",
+               "style" : {
+                  "width" : 100,
+                  "height" : 35,
+                  "padding" : 2,
+                  "margin-left" : 30,
+                  "color" : "#fff",
+                  "font-size" : 20,
+                  "text-align" : "center",
+                  "border-style:" : "solid",
+                  "border-width" : 1,
+                  "border-color" : "#fff",
+                  "border-radius" : 1
+               }
+            }
+         ]
+      }
+   ]
+}
