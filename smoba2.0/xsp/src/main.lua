@@ -36,8 +36,8 @@ btn_ok:setActionCallback(UI.ACTION.CLICK, function()
 		
 		context:close()
 		if selectradio ==1 then
-			HUD("请在冒险模式闯关页面启动脚本,5秒后运行")
-			sleep(5000)
+			--HUD("请在冒险模式闯关页面启动脚本,5秒后运行")
+			--sleep(5000)
 			startMoney()
 		elseif  selectradio ==2 then
 			startComputer(3)
